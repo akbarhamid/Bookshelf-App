@@ -1,4 +1,4 @@
-# sekolahpenggerak
+# Bookshelf App
 
 > Dicoding/Front-End Web/Belajar Membuat Front-End Web untuk Aplikasi/Submission: Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
 

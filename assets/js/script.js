@@ -14,10 +14,10 @@ const isStorageExist = () => {
 };
 
 document.addEventListener(RENDER_EVENT, () => {
-  const unfinishedBook = document.getElementById("belumDibaca");
+  const unfinishedBook = document.getElementById("unreadbook");
   unfinishedBook.innerHTML = "";
 
-  const finishedBook = document.getElementById("sudahDibaca");
+  const finishedBook = document.getElementById("finishedbook");
   finishedBook.innerHTML = "";
 
   for (const bookItem of books) {
@@ -100,9 +100,9 @@ const deleteData = () => {
 };
 
 const addBook = () => {
-  const bookTitle = document.getElementById("judul");
-  const bookAuthor = document.getElementById("penulis");
-  const bookYear = document.getElementById("tahun");
+  const bookTitle = document.getElementById("tittle");
+  const bookAuthor = document.getElementById("author");
+  const bookYear = document.getElementById("year");
   const bookHasFinished = document.getElementById("isRead");
   let bookStatus;
 
@@ -152,7 +152,7 @@ const makeBookElement = (bookObject) => {
 
   if (bookObject.isComplete) {
     const returnBtn = document.createElement("button");
-    returnBtn.classList.add("kembalikan-btn");
+    returnBtn.classList.add("back-btn");
     returnBtn.innerHTML = `<i class='bx bx-undo'></i>`;
 
     returnBtn.addEventListener("click", () => {
@@ -160,7 +160,7 @@ const makeBookElement = (bookObject) => {
     });
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("hapus-btn");
+    deleteBtn.classList.add("delete-btn");
     deleteBtn.innerHTML = `<i class='bx bx-trash'></i>`;
 
     deleteBtn.addEventListener("click", () => {
@@ -171,7 +171,7 @@ const makeBookElement = (bookObject) => {
     container.append(actionContainer);
   } else {
     const finishBtn = document.createElement("button");
-    finishBtn.classList.add("selesai-btn");
+    finishBtn.classList.add("done-btn");
     finishBtn.innerHTML = `<i class='bx bx-check'></i>`;
 
     finishBtn.addEventListener("click", () => {
@@ -179,7 +179,7 @@ const makeBookElement = (bookObject) => {
     });
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("hapus-btn");
+    deleteBtn.classList.add("delete-btn");
     deleteBtn.innerHTML = `<i class='bx bx-trash'></i>`;
 
     deleteBtn.addEventListener("click", () => {
@@ -248,8 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDataFromStorage();
   }
 
-  const simpanForm = document.getElementById("formDataBuku");
-  simpanForm.addEventListener("submit", (event) => {
+  const saveForm = document.getElementById("formDataBook");
+  saveForm.addEventListener("submit", (event) => {
     event.preventDefault();
     addBook();
   });
@@ -262,13 +262,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const resetBtn = document.querySelector(".reset-btn");
   resetBtn.addEventListener("click", () => {
-    document.getElementById("pencarian").value = "";
+    document.getElementById("search").value = "";
     searchBook();
   });
 });
 
 const searchBook = () => {
-  const searchInput = document.getElementById("pencarian").value.toLowerCase();
+  const searchInput = document.getElementById("search").value.toLowerCase();
   const bookItems = document.getElementsByClassName("item");
 
   for (let i = 0; i < bookItems.length; i++) {

@@ -192,9 +192,9 @@ footer {
   gap: 0.25rem;
 }
 
-.hapus-btn,
-.selesai-btn,
-.kembalikan-btn,
+.delete-btn,
+.done-btn,
+.back-btn,
 .reset-btn,
 .cari-btn {
   padding: 0.25rem 0.5rem;
@@ -219,27 +219,27 @@ footer {
   background-color: hsl(215, 20%, 55%);
 }
 
-.hapus-btn {
+.delete-btn {
   background-color: #ef4444;
 }
 
-.hapus-btn:hover {
+.delete-btn:hover {
   background-color: hsl(0, 84%, 50%);
 }
 
-.selesai-btn {
+.done-btn {
   background-color: #22c55e;
 }
 
-.selesai-btn:hover {
+.done-btn:hover {
   background-color: hsl(142, 71%, 40%);
 }
 
-.kembalikan-btn {
+.back-btn {
   background-color: #facc15;
 }
 
-.kembalikan-btn:hover {
+.back-btn:hover {
   background-color: hsl(48, 96%, 47%);
 }
 

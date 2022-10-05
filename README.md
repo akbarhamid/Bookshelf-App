@@ -8,12 +8,12 @@ This application is a web-based application as a basis for learning web programm
 
 ## Assessment Criteria
 
-- [] Able to add new book data
-- [] Have a minimum prayer bookshelf. Namely "Unfinished Read" and Done Read"
-- [] Can be taken from books between shelves
-- [] Can delete book data
-- [] Take advantage of localStorage in storing book data
-- [] The application can work well (no bugs, no force close, application -functionality works well, etc.)
+- [x] Able to add new book data
+- [x] Have a minimum prayer bookshelf. Namely "Unfinished Read" and Done Read"
+- [x] Can be taken from books between shelves
+- [x] Can delete book data
+- [x] Take advantage of localStorage in storing book data
+- [x] The application can work well (no bugs, no force close, application -functionality works well, etc.)
 
 ## Interface
 

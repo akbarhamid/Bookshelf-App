@@ -18,7 +18,7 @@ This application is a web-based application as a basis for learning web programm
 ## Interface
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/72149133/195879907-1f166c96-39e0-4c37-81ce-a06fada3f4f4.png">
+<img src="https://user-images.githubusercontent.com/72149133/195879907-1f166c96-39e0-4c37-81ce-a06fada3f4f4.png" width="400">
 </p>
 
 ## Link

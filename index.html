@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshelf App</title>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Bookshelf App</h1>
+      <h1>Bookshelf App</h1>
     </header>
-    <div class="wrapper">
-
-       
-
-            <!-- TAMBAH -->
-            <div class="form-container">
-                <h2 class="title">Add Book</h2>
-                <form id="formDataBook" action="" method="post">
-                    <div class="form-group">
-                        <input type="text" name="tittle" id="tittle" placeholder="">
-                        <label for="tittle">Tittle</label>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <input type="text" name="author" id="author" placeholder="">
-                            <label for="author">Author</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="year" id="year" placeholder="">
-                            <label for="year">Year</label>
-                        </div>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="isRead" id="isRead" placeholder="">
-                        <label for="isRead">Finished Reading</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Save</button>
-                </form>
+    <main>
+      <!-- TODO: ADD BOOK -->
+      <section class="addbook_section">
+        <h2 class="title">Add Book</h2>
+        <form id="addbook">
+          <div class="field-input">
+            <label for="inputtitlebook">Title</label>
+            <input class="form-input" id="inputtitlebook" type="text" placeholder="Title" required>
+          </div>
+          <div class="row">
+            <div class="field-input">
+              <label for="inputauthorbook">Author</label>
+              <input class="form-input" id="inputauthorbook" type="text" placeholder="Author" required>
             </div>
-
-            <!-- CARI -->
-            <div class="cari-container">
-                <h2 class="title">Search Book</h2>
-                <form id="formSearch" action="" method="post">
-                    <div class="form-group">
-                        <input type="text" name="search" id="search" placeholder="">
-                        <label for="search">Search</label>
-                    </div>
-                    <div class="form-search-bottom">
-                        <button type="reset" class="reset-btn"><i class='bx bx-reset'></i></button>
-                        <button type="submit" class="cari-btn"><i class='bx bx-search-alt-2'></i></button>
-                    </div>
-                </form>
+            <div class="field-input">
+              <label for="inputyearbook">Year</label>
+              <input class="form-input" id="inputyearbook" type="number" placeholder="Year" required>
             </div>
-        
-
-        
-
-            <!-- BELUM DIBACA -->
-            <div class="left-container">
-                <h2 class="title">Unread Book</h2>
-                <div id="unreadbook">
-                </div>
+          </div>
+            <div class="input_inline">
+              <input id="inputbookstatus" type="checkbox" />
+              <label for="inputbookstatus">Finished Reading</label>
             </div>
-
-            <!-- SUDAH DIBACA -->
-            <div class="right-container">
-                <h2 class="title">Finished Book</h2>
-                <div id="finishedbook">
-                </div>
-            </div>
-        
-    </div>
-
+          <button style="margin: auto; font-weight: 600;" class="button-blue" id="submitbook" type="submit">Save</button>
+          <button style="margin: auto; font-weight: 600;" class="button-orange" id="editbook" type="submit">Edit</button>
+        </form>
+      </section>
+      <!-- TODO: SEARCH BOOK -->
+      <section class="search_section">
+          <form id="searchbook">
+            <input id="searchbooktitle" type="text" placeholder="Search Book Title" onkeyup="searchbooklist()">
+          </form>
+      </section>
+      <!-- TODO: UNREAD BOOK -->
+      <section class="unreadbook_section">
+        <h2 class="title">Unread Book</h2>
+        <div class="book-shelf">
+        <div id="unreadbooklist" class="book_list"></div>
+      </div>
+      </section>
+      <!-- TODO: FINISHED BOOK -->
+      <section class="finishedbook_section">
+        <h2 class="title">Finished Book</h2>
+        <div class="book-shelf">
+          <div id="finishedbooklist" class="book_list"></div>
+        </div>
+      </section>
+    </main>
     <footer>
         copyright &copy; 2022 - Muhammad Akbar Hamid
     </footer>
-
-    <script src="assets/js/script.js"></script>
-</body>
-
+    <script src="assets/js/data.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+  </body>
 </html>
